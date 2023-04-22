@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="/source/css/style.css">
 </head>
 
 <body class="page__body">
@@ -11,21 +12,21 @@
     <a class="main-header__logo">
       <img class="main-header__logo-image" src="/source/img/logo-sedona.svg" width="185" height="96" alt="Седона">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav--opened">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+            <a class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="">Фото и видео</a>
+            <a class="site-list__link" href="/source/catalog.html">Фото и видео</a>
           </li>
           <li class="site-list__item">
-            <a href="/source/form.html">Форма отзыва</a>
+            <a class="site-list__link" href="/source/form.html">Форма отзыва</a>
           </li>
           <li class="site-list__item">
-            <a href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
         </ul>
       </div>
     </nav>
@@ -33,6 +34,10 @@
   <main class="main-container">
     <h1 class="visually-hidden">Седона</h1>
     <section class="main-container__section hero">
+      <div class="hero__wrapper">
+        <img class="hero__logo" src="/source/img/welcome-to-sedona.svg" width="282" height="214"
+          alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+      </div>
       <h2 class="hero__title">
         Седона — небольшой городок в Аризоне, заслуживающий большего!
       </h2>
@@ -45,35 +50,56 @@
       <ul class="advantages__list">
         <li class="advantages__item">
           <h3 class="advantages__title">Настоящий городок</h3>
-            <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <img class="advantages__picture" src="/source/img/sedona-city.jpg" alt="городок Седона.">
+          <ul class="tips-list">
+            <li class="tips-list__item">
+              <h4 class="tips-list__title">Жилье</h4>
+              <p class="tips-list__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li class="tips-list__item">
+              <h4 class="tips-list__title">Еда</h4>
+              <p class="tips-list__description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+            </li>
+            <li class="tips-list__item">
+              <h4 class="tips-list__title">Сувениры</h4>
+              <p class="tips-list__description">Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
         </li>
         <li class="advantages__item">
           <h3 class="advantages__title">Там есть Мост Дьявола</h3>
-            <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-        </li>
-        <li class="advantages__item">
-          <h3 class="advantages__title">Небольшая площать</h3>
-            <p class="advantages__description">Все интересные места находятся очень близко</p>
-        </li>
-        <li class="advantages__item">
-          <h3 class="advantages__title">Красивая дорога</h3>
-            <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-        </li>
-        <li class="advantages__item">
-          <h3 class="advantages__title">Мало туристов</h3>
-            <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
+          <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          <img class="advantages__picture" src="/source/img/devil-bridge.jpg" alt="Мост Дьявола.">
+          <ul class="subadvantages-list">
+            <li class="subadvantages-list__item">
+              <h4 class="subadvantages-list__title">Небольшая площать</h4>
+              <p class="subadvantages-list__description">Все интересные места находятся очень близко</p>
+            </li>
+            <li class="subadvantages-list__item">
+              <h4 class="subadvantages-list__title">Красивая дорога</h4>
+              <p class="subadvantages-list__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li class="subadvantages-list__item">
+              <h4 class="subadvantages-list__title">Мало туристов</h4>
+              <p class="subadvantages-list__description">Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </ul>
         </li>
       </ul>
     </section>
     <section class="main-container__section search">
-      <h2 class="search__header">Заинтересовались?</h2>
+      <h2 class="search__title">Заинтересовались?</h2>
       <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
       </p>
-      <a class="search__link" href="/source/form.html">Найти гостиницу</a>
+      <a class="search__link button" href="/source/form.html">Найти гостиницу</a>
     </section>
     <section class="main-container__section address">
       <h2 class="visually-hidden">Адрес Седоны</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68125.70518523117!2d-111.8444389996857!3d34.86165418423357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1681983142366!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe class="address__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68125.70518523117!2d-111.8444389996857!3d34.86165418423357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1681983142366!5m2!1sru!2sru"
+        width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
   <footer class="main-footer">
