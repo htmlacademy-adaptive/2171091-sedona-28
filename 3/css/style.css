@@ -1,0 +1,516 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("/source/fonts/ptsans.woff");
+}
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("/source/fonts/ptsansbolf.woff");
+}
+.page__body {
+  margin: 0 auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.main-header {
+  background: #ffffff;
+  display: flex;
+  padding: 0 11px 0 67px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header__logo {
+  text-align: center;
+}
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+}
+.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #81b3d2;
+  min-width: 320px;
+}
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 23px;
+  height: 16px;
+  cursor: pointer;
+  border: none;
+  border-top: #81b3d2 solid 3px;
+  border-bottom: #81b3d2 solid 3px;
+  padding: 0;
+  background-color: #ffffff;
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 23px;
+  height: 3px;
+  background-color: #81b3d2;
+}
+.main-nav--closed .main-nav__toggle:hover {
+  background-color: rgba(129, 179, 210, 0.6);
+}
+.main-nav--closed .main-nav__toggle:active {
+  background-color: rgba(129, 179, 210, 0.3);
+}
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: rgba(129, 179, 210, 0.6);
+}
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: rgba(129, 179, 210, 0.3);
+}
+/*.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border: none;
+  top: 24px;
+  background-color: #ffffff;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 22px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade(#ffffff, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#ffffff, 30%);
+  }
+}*/
+.site-list {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.site-list__item {
+  padding: 17px 10px 12px 10px;
+  box-shadow: 0 1px 2px rgba(1, 1, 1, 0.2);
+}
+.site-list__link {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.hero {
+  text-align: center;
+}
+.hero__wrapper {
+  background-image: url("/source/img/background-sedona.jpg");
+  background-position: center;
+}
+.hero__title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 32px 18px 35px 18px;
+}
+.hero__description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 18px 32px 18px;
+}
+.advantages__list {
+  text-align: center;
+  list-style-type: none;
+  background: #81b3d2;
+  margin: 0;
+  padding: 0;
+}
+.advantages__item {
+  color: #ffffff;
+}
+.advantages__title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 37px 18px 0 18px;
+}
+.advantages__description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 49px 18px 40px 18px;
+}
+.advantages__picture {
+  width: 320px;
+  height: 260px;
+}
+.subadvantages-list {
+  background: #eeeeee;
+  margin: 0;
+  padding: 24px 18px 46px 28px;
+}
+.subadvantages-list__item {
+  color: #000000;
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.subadvantages-list__title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 8px 0 16px 0;
+}
+.subadvantages-list__description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.tips-list {
+  background: #FFFFFF;
+  margin: 0;
+  padding: 23px 18px 46px 65px;
+}
+.tips-list__item {
+  color: #000000;
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 25px;
+}
+.tips-list__title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 8px 0 16px 0;
+}
+.tips-list__description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.search {
+  padding: 38px 18px 49px 18px;
+  text-align: center;
+}
+.search__title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 0 18px 0;
+  text-transform: uppercase;
+}
+.search__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0 0 32px 0;
+  text-transform: uppercase;
+}
+.button {
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  background: #81b3d2;
+  padding: 16px 49px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+}
+.address__map {
+  text-align: center;
+}
+.main-footer {
+  text-align: center;
+  padding: 33px 82px 30px 82px;
+}
+.social__title {
+  color: #000000;
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+}
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 6px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.social__item {
+  width: 48px;
+  height: 48px;
+}
+.copyright__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.copyright__link {
+  text-decoration: none;
+  margin-left: 12px;
+}
+.banner {
+  color: #000000;
+  text-align: center;
+}
+.banner__container {
+  background-image: url("/source/img/background-sedona.jpg");
+  background-position: center;
+  padding: 52px 46px 67px 45px;
+}
+.banner__title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 36px 20px 24px 20px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.banner__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0 20px 28px 20px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #333333;
+}
+.form__fieldset {
+  border: none;
+  padding: 24px 20px;
+  margin: 0;
+}
+.form__title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 0;
+  text-align: center;
+}
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.form__confirm {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 56px 20px 22px 20px;
+}
+.form__necessary {
+  font-family: "PT Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 3px;
+  align-self: flex-end;
+  text-transform: uppercase;
+  opacity: 60%;
+}
+.username-list__item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.username-list__label {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+.username-list__input {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  padding: 16px;
+}
+.usercontacts-list__item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.usercontacts-list__label {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+.usercontacts-list__input {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  padding: 16px;
+}
+.places-list {
+  font-family: "PT Sans Bold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+.places-list__item {
+  margin-bottom: 36px;
+}
+.places-list__label {
+  padding-left: 82px;
+}
+.review-list {
+  font-family: "PT Sans Bold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+.review-list__item {
+  margin-bottom: 36px;
+}
+.review-list__label {
+  padding-left: 82px;
+}
+.catalog__list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.catalog__item {
+  border: 1px solid #e5e5e5;
+  padding: 24px 20px 25px 20px;
+}
+.post__picture {
+  width: 280px;
+  height: 375px;
+}
+.post__title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  margin: 15px 0 0 0;
+  text-transform: uppercase;
+}
+.post__description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  margin: 21px 0 16px 0;
+}
+.post__likes {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  margin: 0 0 0 37px;
+}
+.video__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  padding: 17px 26px 24px 28px;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.video__description {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0 20px 28px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  color: #333333;
+}
+/*# sourceMappingURL=style.css.map */
