@@ -1,13 +1,52 @@
 .copyright__text {
   font-family: "PT Sans", sans-serif;
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 21px;
   margin: 0;
   text-transform: uppercase;
+  color: @black;
+  margin-right: 12px;
+
+  &:hover,
+  &:focus {
+    color: @blue;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
 
 .copyright__link {
   text-decoration: none;
-  margin-left: 12px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    color: @blue;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+.copyright__link > svg {
+  fill: @black;
+}
+
+.copyright__link:hover > svg {
+  fill: @blue;
+}
+
+.copyright__link:focus > svg {
+  fill: @blue;
+}
+
+.copyright__link:active > svg {
+  fill: #b3b3b3;
 }

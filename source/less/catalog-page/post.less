@@ -1,32 +1,117 @@
 .post__picture {
-  width: 280px;
-  height: 375px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .post__title {
-  font-family: "PT Sans Bold", sans-serif;
-  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
+  font-size: 14px;
   line-height: 21px;
   text-align: left;
   margin: 15px 0 0 0;
   text-transform: uppercase;
 }
 
-.post__description {
+.post__author {
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   text-align: left;
-  margin: 21px 0 16px 0;
+  margin: 0 0 16px 0;
+  color: @darkgrey;
 }
 
 .post__likes {
+  position: relative;
   font-family: "PT Sans Bold", sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
   text-align: left;
   margin: 0 0 0 37px;
+}
+
+.post__likes::before {
+  position: absolute;
+  content: "";
+  background-image: url("/source/img/like-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 23px;
+  height: 21px;
+  bottom: 0;
+  left: -37px;
+  opacity: 30%;
+}
+
+@media (min-width: @tablet-width) {
+  .post__picture {
+    height: 267px;
+  }
+
+  .post__info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px 15px 20px;
+  }
+
+  .post__description {
+    padding: 0;
+    margin: 0;
+  }
+
+  .post__title {
+    margin: 0;
+  }
+
+  .post__author {
+    padding: 0;
+    margin: 0;
+  }
+
+  .post__likes {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .post {
+    position: relative;
+  }
+
+  .post__picture {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .post__info {
+    box-sizing: border-box;
+    position: absolute;
+    color: @white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    bottom: 0;
+    padding: 17px 20px 17px 25px;
+  }
+
+  .post__author {
+    color: @white;
+  }
+
+  .post__like {
+    fill: @white;
+    opacity: 100%;
+  }
+
+  .post__likes::before {
+    fill: @white;
+    stroke: @white;
+    opacity: 100%;
+  }
 }
