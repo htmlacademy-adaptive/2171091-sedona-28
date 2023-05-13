@@ -1,0 +1,31 @@
+.main-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33px 92px;
+  gap: 30px;
+}
+
+.main-footer__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    flex-direction: row;
+    gap: 0;
+    padding: 36px 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer {
+    padding: 36px 120px;
+  }
+}

@@ -1,0 +1,127 @@
+@media (max-width: @mobile-width-only) {
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    background: @blue;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    z-index: 2;
+    display: block;
+    width: 23px;
+    height: 22px;
+    cursor: pointer;
+    border: none;
+    background-color: @blue;
+    padding: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: 0;
+      width: 23px;
+      height: 5px;
+      background-color: @white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      right: 0;
+      width: 23px;
+      height: 5px;
+      background-color: @white;
+    }
+
+    &:hover {
+      background-color: fade(@blue, 60%);
+    }
+
+    &:active {
+      background-color: fade(@blue, 30%);
+    }
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    z-index: 4;
+    display: block;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 3px;
+      background-color: @white;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: fade(@white, 60%);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade(@white, 30%);
+    }
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 100%;
+    background-color: @white;
+  }
+
+  .main-nav__wrapper {
+    position: relative;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav--closed .main-nav__toggle,
+  .main-nav--opened .main-nav__toggle {
+    display: none;
+  }
+}

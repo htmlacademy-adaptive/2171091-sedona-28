@@ -3,29 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Седона-форма</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Седона-каталог</title>
+  <link rel="stylesheet" href="/source/css/style.css">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <a href="/source/index.html" class="main-header__logo">
+    <a class="main-header__logo">
       <img class="main-header__logo-image" src="/source/img/logo-sedona.svg" width="185" height="96" alt="Седона">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="/source/index.html">Главная</a>
+          <li class="site-list__item">
+            <div class="site-list__wrap">
+              <a class="site-list__link" href="/source/index.html">Главная</a>
+              <a class="site-list__link site-list__link--active">Фото и видео</a>
+            </div>
           </li>
           <li class="site-list__item">
-            <a>Фото и видео</a>
+            <div class="site-list__wrap">
+              <a class="site-list__link" href="/source/form.html">Форма отзыва</a>
+              <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            </div>
           </li>
-          <li class="site-list__item">
-            <a href="/source/form.html">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru/">HTML Academy</a>
         </ul>
       </div>
     </nav>
@@ -41,7 +44,7 @@
         </svg>
       </div>
       <h1 class="banner__title">Фото и видео</h1>
-      <p class="banner__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+      <p class="banner__text">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о
         политике и
         экономике.</p>
     </section>
@@ -49,58 +52,105 @@
       <ul class="catalog__list">
         <li class="catalog__item post">
           <img class="post__picture" src="/source/img/Boris.jpg" width="280" height="280" alt="Неродные просторы">
-          <h2 class="post__title">Неродные просторы</h2>
-          <p class="post__description">Автор фото: Борис</p>
-          <span class="post__likes">1350</span>
+          <div class="post__info">
+            <div class="post__description">
+              <h2 class="post__title">Неродные просторы</h2>
+              <p class="post__author">Автор фото: Борис</p>
+            </div>
+            <span class="post__likes">1350</span>
+          </div>
         </li>
         <li class="catalog__item post">
           <img class="post__picture" src="/source/img/Sergey.jpg" width="280" height="280" alt="Местная растительность">
-          <h2 class="post__title">Местная растительность</h2>
-          <p class="post__description">Автор фото: Сергей</p>
-          <span class="post__likes">143</span>
+          <div class="post__info">
+            <div class="post__description">
+              <h2 class="post__title">Местная растительность</h2>
+              <p class="post__author">Автор фото: Сергей</p>
+            </div>
+            <span class="post__likes">143</span>
+          </div>
         </li>
         <li class="catalog__item post">
           <img class="post__picture" src="/source/img/Petr.jpg" width="280" height="280" alt="Дорога на север">
-          <h2 class="post__title">Дорога на север</h2>
-          <p class="post__description">Автор фото: Петр</p>
-          <span class="post__likes">96</span>
+          <div class="post__info">
+            <div class="post__description">
+              <h2 class="post__title">Дорога на север</h2>
+              <p class="post__author">Автор фото: Петр</p>
+            </div>
+            <span class="post__likes">96</span>
+          </div>
         </li>
         <li class="catalog__item post">
           <img class="post__picture" src="/source/img/Anton.jpg" width="280" height="280" alt="Мост Дьявола">
-          <h2 class="post__title">Мост Дьявола</h2>
-          <p class="post__description">Автор фото: Антон</p>
-          <span class="post__likes">254</span>
+          <div class="post__info">
+            <div class="post__description">
+              <h2 class="post__title">Мост Дьявола</h2>
+              <p class="post__author">Автор фото: Антон</p>
+            </div>
+            <span class="post__likes">254</span>
+          </div>
         </li>
       </ul>
     </section>
     <section class="main-container__section video">
       <h2 class="video__title">Все еще сомневаетесь?</h2>
-      <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
-        раз!</p>
-      <div class="video__player"></div>
+      <p class="video__description">
+        Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!
+      </p>
+      <div class="video__wrap">
+        <video class="video__player" poster="/source/img/video.jpg"></video>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__social social">
-      <b class="social__title">#VISITSEDONA</b>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в
-            Ютубе</a>
-        </li>
-      </ul>
-    </div>
+    <b class="main-footer__title">#VISITSEDONA</b>
+    <ul class="main-footer__social social-list">
+      <li class="social-list__item">
+        <a class="social-list__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+          <span class="visually-hidden">Мы в Вконтакте</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_62710_971)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M23.45 5.948C23.616 5.402 23.45 5 22.655 5H20.03C19.362 5 19.054 5.347 18.887 5.73C18.887 5.73 17.552 8.926 15.661 11.002C15.049 11.604 14.771 11.795 14.437 11.795C14.27 11.795 14.019 11.604 14.019 11.057V5.948C14.019 5.292 13.835 5 13.279 5H9.151C8.734 5 8.483 5.304 8.483 5.593C8.483 6.214 9.429 6.358 9.526 8.106V11.904C9.526 12.737 9.373 12.888 9.039 12.888C8.149 12.888 5.984 9.677 4.699 6.003C4.45 5.288 4.198 5 3.527 5H0.9C0.15 5 0 5.347 0 5.73C0 6.412 0.89 9.8 4.145 14.281C6.315 17.341 9.37 19 12.153 19C13.822 19 14.028 18.632 14.028 17.997V15.684C14.028 14.947 14.186 14.8 14.715 14.8C15.105 14.8 15.772 14.992 17.33 16.467C19.11 18.216 19.403 19 20.405 19H23.03C23.78 19 24.156 18.632 23.94 17.904C23.702 17.18 22.852 16.129 21.725 14.882C21.113 14.172 20.195 13.407 19.916 13.024C19.527 12.533 19.638 12.314 19.916 11.877C19.916 11.877 23.116 7.451 23.449 5.948H23.45Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_62710_971">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social__link--telegram" href="https://t.me/htmlacademy">
+          <span class="visually-hidden">Мы в Телеграме</span>
+          <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21.4393 1.62225L18.2705 16.566C18.0313 17.6205 17.408 17.883 16.5223 17.3865L11.6938 13.8285L9.36425 16.0695C9.10626 16.3275 8.891 16.5428 8.39375 16.5428L8.741 11.6258L17.6893 3.54C18.0785 3.1935 17.6045 3.00075 17.0848 3.348L6.02225 10.314L1.25976 8.823C0.224006 8.49975 0.205256 7.78725 1.47576 7.29L20.1035 0.113253C20.966 -0.209997 21.7205 0.305253 21.4393 1.623V1.62225Z" />
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+          <span class="visually-hidden">Мы в Ютубе</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.1813 5H4.81331C3.30618 5 2 6.3 2 7.8V16.1C2 17.7 3.30618 19 4.81331 19H19.1813C20.7889 19 21.9946 17.7 21.9946 16.2V7.8C22.095 6.3 20.7889 5 19.1813 5ZM9.03326 15.4V8.6L15.8656 12L9.03326 15.4Z" />
+          </svg>
+        </a>
+      </li>
+    </ul>
     <div class="main-footer__copyright copyright">
-      <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">HTML Academy</span>
+        <p class="copyright__text">Разработано</p>
+        <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.65 0.449951H13.55L0.0500031 1.84995V26.55L13.55 34.5499L26.95 26.55V1.84995L13.65 0.449951ZM25.05 12.55L13.55 5.74995V5.64995H13.45L13.35 5.54995V5.64995L1.95 12.55V3.54995L13.45 2.34995L25.05 3.54995V12.55ZM13.45 7.24995L24.95 13.95L20.45 16.55L13.35 12.35V13.75L19.25 17.25L18.35 17.75L13.35 14.75V16.15L17.15 18.45L16.35 18.95L13.35 17.15V18.55L15.25 19.65L13.45 20.75L2.05 14.05L13.45 7.24995ZM1.95 15.55L13.35 22.35V23.35L5.45 18.65V20.05L13.45 24.85V25.95L5.45 21.25V22.65L13.45 27.45L21.55 22.55V17.35L24.95 15.35V25.35L13.45 32.25L1.95 25.45V15.55Z"/>
+        </svg>
+      </a>
     </div>
   </footer>
+  <script src="/source/js/script.js"></script>
 </body>
 
 </html>

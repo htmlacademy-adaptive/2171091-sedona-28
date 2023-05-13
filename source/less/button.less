@@ -1,0 +1,30 @@
+.button {
+  display: block;
+  color: @white;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  background: @blue;
+  padding: 16px 49px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background: #669ec0;
+    outline: none;
+  }
+
+  &:active {
+    background: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background: #e5e5e5;
+  }
+}

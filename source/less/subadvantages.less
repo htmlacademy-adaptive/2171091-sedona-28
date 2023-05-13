@@ -1,0 +1,88 @@
+.subadvantages-list {
+  background: @lightgrey;
+  margin: 0;
+  padding: 0 18px 4px 18px;
+}
+
+.subadvantages-list__item {
+  color: @black;
+  list-style-type: none;
+  text-align: center;
+  border-bottom: solid 1px @grey;
+  padding: 24px 8px;
+}
+
+.subadvantages-list__item:last-child {
+  border-bottom: none;
+}
+
+.subadvantages-list__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 11px 0;
+}
+
+.subadvantages-list__title br {
+  display: none;
+}
+
+.subadvantages-list__number {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.subadvantages-list__description {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: @darkgrey;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+@media (min-width: @tablet-width) {
+  .subadvantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+
+  .subadvantages-list__item {
+    text-align: center;
+    box-sizing: border-box;
+    width: 256px;
+    padding: 41px 33px;
+    border-bottom: none;
+  }
+
+  .subadvantages-list__title {
+    margin: 0 0 21px 0;
+  }
+
+  .subadvantages-list__title br {
+    display: block;
+  }
+
+  .subadvantages-list__description {
+    margin: 21px 0 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .subadvantages-list__item {
+    box-sizing: border-box;
+    min-width: 341px;
+    padding: 52px 50px;
+  }
+}

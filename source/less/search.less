@@ -1,0 +1,60 @@
+.search {
+  padding: 38px 18px 49px 18px;
+  text-align: center;
+}
+
+.search__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  padding: 0 0 26px 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.search__text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0 10px 32px 10px;
+  margin: 0;
+  text-transform: uppercase;
+  color: @darkgrey;
+
+  & br {
+    display: none;
+  }
+}
+
+.search__link {
+  max-width: 458px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .search {
+    padding: 60px 166px 55px 167px;
+  }
+
+  .search__title {
+    font-size: 30px;
+    padding: 0 0 30px 0;
+  }
+
+  .search__text {
+    padding: 0;
+    padding-bottom: 44px;
+  }
+
+  .search__text br {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search__title {
+    line-height: 30px;
+  }
+}

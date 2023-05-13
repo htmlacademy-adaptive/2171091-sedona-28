@@ -1,0 +1,85 @@
+.video {
+  text-align: center;
+  padding: 17px 20px 0 20px;
+}
+
+.video__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0 0 26px 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: @black;
+}
+
+.video__description {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0 0 38px 0;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  color: @darkgrey;
+
+  & br {
+    display: none;
+  }
+}
+
+.video__player {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.video__wrap {
+  position: relative;
+}
+
+.video__wrap::after {
+  position: absolute;
+  content: "";
+  background-image: url("/source/img/video-play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .video__title {
+    font-size: 21px;
+    padding: 0 60px 26px 60px;
+  }
+
+  .video__description {
+    padding: 0 160px 66px 160px;
+  }
+
+  .video__description br {
+    display: inline;
+  }
+
+  .video__player {
+    box-sizing: border-box;
+    padding: 0 60px 40px 60px;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__title {
+    font-size: 30px;
+  }
+
+  .video__description {
+    padding: 0 200px 64px 200px;
+  }
+}
