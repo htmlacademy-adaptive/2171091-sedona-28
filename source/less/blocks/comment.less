@@ -1,0 +1,37 @@
+.comment {
+  text-align: center;
+}
+
+.comment__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 150px;
+  max-width: 768px;
+  resize: none;
+}
+
+@media (min-width: @tablet-width) {
+  .comment {
+    width: 100%;
+    padding-bottom: 44px;
+  }
+
+  .comment__title {
+    width: 60%;
+    padding: 0;
+  }
+
+  .comment__textarea {
+    min-height: 160px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment__title {
+    min-width: 400px;
+  }
+
+  .comment__textarea {
+    margin: 0 96px;
+  }
+}
