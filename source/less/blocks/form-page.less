@@ -1,0 +1,43 @@
+.form-page__title {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 36px 20px 24px 20px;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-page__text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0 20px 28px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  color: @darkgrey;
+}
+
+@media (min-width: @tablet-width) {
+  .form-page__title {
+    font-size: 30px;
+    padding: 66px 166px 21px 166px;
+  }
+
+  .form-page__text {
+    padding: 0 166px 107px 166px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-page__title {
+    padding: 115px 382px 30px 382px;
+  }
+
+  .form-page__text {
+    padding: 0 382px 68px 382px;
+  }
+}
