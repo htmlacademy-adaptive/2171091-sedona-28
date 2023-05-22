@@ -14,15 +14,15 @@
   position: fixed;
   top: 50%;
   left: 0;
+  transform: translateY(-50%);
   background: @white;
-  padding: 44px 42px 35px 42px;
+  padding: 44px 45px 35px 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .modal-error__title {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -30,14 +30,9 @@
   margin: 0;
   text-align: center;
   color: @black;
-
-  & br {
-    display: none;
-  }
 }
 
 .modal-error__description {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -65,14 +60,11 @@
   .modal-error__title {
     font-size: 30px;
     line-height: 40px;
-  }
-
-  .modal-error__title br {
-    display: block;
+    padding: 0 20px;
   }
 
   .modal-error__description {
-    padding: 26px 0 35px 0;
+    padding: 21px 0 48px;
   }
 
   .modal-error__button {
@@ -86,4 +78,14 @@
 
 .modal-error--opened {
   display: block;
+}
+
+@media (min-width: @desktop-width) {
+  .modal-error__container {
+    padding: 48px 60px 49px 60px;
+  }
+
+  .modal-error__description {
+    padding: 26px 0 47px;
+  }
 }

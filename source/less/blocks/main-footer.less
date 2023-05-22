@@ -1,15 +1,14 @@
 .main-footer {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 38px 82px;
   gap: 30px;
+  padding: 32px 82px;
 }
 
 .main-footer__title {
-  font-family: "PT Sans", "Arial", sans-serif;
+  display: block;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -18,6 +17,7 @@
 
 @media (min-width: @tablet-width) {
   .main-footer {
+    display: flex;
     flex-direction: row;
     gap: 0;
     padding: 34px 60px;
@@ -26,6 +26,6 @@
 
 @media (min-width: @desktop-width) {
   .main-footer {
-    padding: 36px 120px;
+    padding: 32px 120px;
   }
 }

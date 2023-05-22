@@ -1,3 +1,7 @@
+.places {
+  padding: 24px 20px 24px 20px;
+}
+
 .places__list {
   margin: 0;
   padding: 0;
@@ -42,6 +46,10 @@
   }
 }
 
+.places__input:focus + .places__mark {
+  outline: 2px solid @blue;
+}
+
 .places__input:checked + .places__mark {
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
@@ -60,6 +68,7 @@
 @media (min-width: @tablet-width) {
   .places {
     width: 100%;
+    padding: 0;
     padding-bottom: 42px;
   }
 

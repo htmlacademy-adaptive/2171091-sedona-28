@@ -1,5 +1,4 @@
 .catalog__title {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -10,7 +9,6 @@
 }
 
 .catalog__text {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -30,6 +28,7 @@
   align-items: center;
   padding: 0;
   margin: 0;
+  border-top: #e5e5e5 1px solid;
 }
 
 .catalog__item {
@@ -38,7 +37,6 @@
   padding: 24px 20px 25px 20px;
   width: 100%;
   box-sizing: border-box;
-  border-top: #e5e5e5 1px solid;
   border-bottom: #e5e5e5 1px solid;
 }
 
@@ -49,12 +47,15 @@
   }
 
   .catalog__text {
-    padding: 0 170px 80px 170px;
+    padding: 0 170px 82px 170px;
   }
 
   .catalog__list {
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 0 60px 60px 60px;
+    border: none;
   }
 
   .catalog__item {
@@ -65,14 +66,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     background: #f2f2f2;
     width: 50%;
-  }
-
-  .catalog__item::before,
-  .catalog__item:last-child::after {
-    display: none;
   }
 
   .catalog__item:nth-child(odd) {
@@ -100,6 +96,5 @@
   .catalog__item {
     background: none;
     width: fit-content;
-    flex-grow: 1;
   }
 }

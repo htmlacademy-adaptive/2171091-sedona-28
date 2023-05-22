@@ -1,3 +1,23 @@
+.address {
+  background-color: @white;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 5px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.jpg");
+    background-size: 1200px auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .address {
+    padding: 0;
+  }
+}
+
 .address__map {
   width: 100%;
 }
