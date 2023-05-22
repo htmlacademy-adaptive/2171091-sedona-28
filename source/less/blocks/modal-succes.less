@@ -13,6 +13,7 @@
   width: 100%;
   position: fixed;
   top: 50%;
+  transform: translateY(-50%);
   left: 0;
   background: @white;
   display: flex;
@@ -21,25 +22,23 @@
 }
 
 .modal-success__title {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
-  padding: 44px 38px 26px 38px;
+  padding: 38px 38px 26px 38px;
   text-align: center;
   color: @black;
 }
 
 .modal-success__description {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   text-transform: uppercase;
   margin: 0;
-  padding: 0 38px 26px 38px;
+  padding: 0 55px 52px 50px;
   text-align: center;
   color: @darkgrey;
 }
@@ -55,6 +54,7 @@
   text-align: center;
   min-width: 280px;
   margin: 20px auto;
+  padding: 18px 10px 14px;
 }
 
 @media (min-width: @tablet-width) {
@@ -67,18 +67,15 @@
 
   .modal-success__title {
     font-size: 30px;
-    padding: 57px 99px 26px 97px;
+    padding: 50px 99px 30px 97px;
   }
 
   .modal-success__description {
-    padding: 0 99px 34px 97px;
-  }
-
-  .modal-success__description br {
-    display: none;
+    padding: 0 115px 52px 110px;
   }
 
   .modal-success__button {
+    font-size: 21px;
     margin: 44px 91px;
     width: 457px;
   }

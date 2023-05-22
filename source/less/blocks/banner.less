@@ -4,14 +4,21 @@
 
 .banner__container {
   position: relative;
-  background-image: url("../img/background-sedona.jpg");
+  background-image: url("../img/banner-background-mobile.jpg");
   background-color: @brown;
   height: 158px;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 45% 85%;
+  background-position: center bottom;
   padding-top: 52px;
   box-sizing: border-box;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/banner-background-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
 }
 
 .banner__container::after {
@@ -19,7 +26,7 @@
   position: absolute;
   background-image: url("../img/triangle.svg");
   background-position: center;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   background-repeat: no-repeat;
   width: 100%;
@@ -32,6 +39,7 @@
     height: 290px;
     padding-top: 95px;
     background-position: center bottom;
+    background-image: url("../img/background-sedona@.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background-sedona@2x.jpg");
@@ -54,7 +62,7 @@
 
   .banner__container::after {
     width: 100%;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
   }
 

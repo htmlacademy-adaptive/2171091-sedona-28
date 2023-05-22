@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -13,26 +13,26 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo">
-      <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Седона">
-    </a>
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list">
-        <li class="main-nav__list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
-        <li class="main-nav__list__item">
-          <a class="main-nav__link main-nav__link--active">Фото и видео</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="site-list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="main-nav__list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
         </li>
       </ul>
     </nav>
+    <a class="main-header__logo" href="index.html">
+      <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Седона">
+    </a>
   </header>
   <main class="main-container">
     <section class="banner">
@@ -47,7 +47,7 @@
         экономике.</p>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <div class="post">
+          <a class="post post-main" href="#">
             <picture class="post__picture">
               <source type="image/webp" media="(min-width: 1200px)"
                 srcset="img/photo-1.webp 1x, img/photo-1@2x.webp 2x">
@@ -66,10 +66,10 @@
               </div>
               <span class="post__likes">1350</span>
             </div>
-          </div>
+          </a>
         </li>
         <li class="catalog__item">
-          <div class="post">
+          <a class="post" href="#">
             <picture class="post__picture">
               <source type="image/webp" media="(min-width: 1200px)"
                 srcset="img/photo-2.webp 1x, img/photo-2@2x.webp 2x">
@@ -88,10 +88,10 @@
               </div>
               <span class="post__likes">143</span>
             </div>
-          </div>
+          </a>
         </li>
         <li class="catalog__item">
-          <div class="post">
+          <a class="post" href="#">
             <picture class="post__picture">
               <source type="image/webp" media="(min-width: 1200px)"
                 srcset="img/photo-3.webp 1x, img/photo-3@2x.webp 2x">
@@ -110,10 +110,10 @@
               </div>
               <span class="post__likes">96</span>
             </div>
-          </div>
+          </a>
         </li>
         <li class="catalog__item">
-          <div class="post">
+          <a class="post" href="#">
             <picture class="post__picture">
               <source type="image/webp" media="(min-width: 1200px)"
                 srcset="img/photo-4.webp 1x, img/photo-4@2x.webp 2x">
@@ -132,7 +132,7 @@
               </div>
               <span class="post__likes">254</span>
             </div>
-          </div>
+          </a>
         </li>
       </ul>
     </section>
@@ -141,7 +141,7 @@
       <p class="video__description">
         Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!
       </p>
-      <div class="video__wrap">
+      <a class="video__link" href="#">
         <picture>
           <source type="image/webp" media="(min-width: 1200px)"
             srcset="img/video-preview.webp 1x, img/video-preview@2x.webp 2x">
@@ -153,7 +153,7 @@
           <img class="video__player" src="img/video-preview-mobile.jpg" width="280" height="177"
             srcset="img/video-preview-mobile@2x.jpg 2x" alt="Видео">
         </picture>
-      </div>
+      </a>
     </section>
   </main>
   <footer class="main-footer">

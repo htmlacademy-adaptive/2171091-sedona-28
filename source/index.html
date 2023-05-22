@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -13,26 +13,26 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo">
-      <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Седона">
-    </a>
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list">
-        <li class="main-nav__list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--active">Главная</a>
         </li>
-        <li class="main-nav__list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="site-list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="main-nav__list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
         </li>
       </ul>
     </nav>
+    <a class="main-header__logo">
+      <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Седона">
+    </a>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Седона</h1>
@@ -71,16 +71,16 @@
               srcset="img/sedona-city@2x.jpg 2x" alt="городок Седона.">
           </picture>
           <ul class="tips-list">
-            <li class="tips-list__item">
+            <li class="tips-list__item tips-list__item-city">
               <h4 class="tips-list__title">Жилье</h4>
               <p class="tips-list__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
-            <li class="tips-list__item">
+            <li class="tips-list__item tips-list__item-food">
               <h4 class="tips-list__title">Еда</h4>
               <p class="tips-list__description">Всегда заказывайте фирменный бургер, <span>Вы не разочаруетесь!</span>
               </p>
             </li>
-            <li class="tips-list__item">
+            <li class="tips-list__item tips-list__item-gift">
               <h4 class="tips-list__title">Сувениры</h4>
               <p class="tips-list__description">Не только китайского, <span>но и местного производства!</span></p>
             </li>
@@ -103,7 +103,7 @@
             <source media="(min-width: 768px)"
               srcset="img/devil-bridge-tablet@1x.jpg 1x, img/devil-bridge-tablet@2x.jpg 2x">
             <img class="advantages__picture" src="img/devil-bridge.jpg" width="320" height="260"
-              srcset="img/devil-bridge@x2.jpg 2x" alt="Мост Дьявола.">
+              srcset="img/devil-bridge@2x.jpg 2x" alt="Мост Дьявола.">
           </picture>
           <ul class="subadvantages-list">
             <li class="subadvantages-list__item">
