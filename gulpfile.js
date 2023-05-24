@@ -9,8 +9,8 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
-import {deleteAsync} from 'del';
+import svgSprite from 'gulp-svg-sprite';
+import { deleteAsync } from 'del';
 import htmlmin from 'gulp-htmlmin';
 
 // Styles
@@ -74,12 +74,16 @@ const svg = () =>
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
+const config = {
+  mode: {
+    stack: true
+  }
+};
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest('out'))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
